@@ -511,13 +511,13 @@ function handleLogin(req, res) {
       const user = results[0];
       bcrypt.compare(password, user.password, (err, isMatch) => {
         if (isMatch) {
-          res.writeHead(302, {
-            'Set-Cookie': [
-              `loggedIn=true; Path=/; HttpOnly`,
-              `uid=${user.uid}; Path=/; HttpOnly`
-            ],
-            Location: '/dashboard'
-          });
+          res.setHeader('Set-Cookie', [
+            `loggedIn=true; Path=/; HttpOnly`,
+            `uid=${user.uid}; Path=/; HttpOnly`
+          ]);
+          res.writeHead(302, { Location: '/dashboard' });
+          res.end();
+          
           
           res.end();
         } else {
