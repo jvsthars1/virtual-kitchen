@@ -7,7 +7,8 @@ const bcrypt = require('bcryptjs');
 
 // Connect to MySQL
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'cs2410-db01pvm.aston.ac.uk',
+
   user: 'u-230235494',
   password: 's2fvi58sF0KH3qv',
   database: 'u_230235494_db'
@@ -562,6 +563,7 @@ if (!uid) {
 }
 
 // Start server
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
