@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - My Virtual Kitchen</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<header id="main-header">
+  <nav>
+    <div class="logo">
+      <a href="/home"><img src="/public/images/logo.jpg" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/viewRecipes">Recipes</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Login</a></li>
+    </ul>
+    <form action="/viewRecipes" method="GET" class="search-form">
+      <input type="text" name="search" placeholder="Search Recipes..." required>
+      <button type="submit">🔍</button>
+    </form>
+  </nav>
+</header>
+
+<main style="margin-top: 50px;">
+  <h1>Login</h1>
+
+  <!-- Inline error message area -->
+  <p id="login-error" style="color: red; text-align: center;"></p>
+
+  <form id="login-form" action="/login" method="POST" style="margin: 30px auto; width: 300px; text-align: left;">
+    <label>Username:</label><br>
+    <input type="text" name="username" required style="width: 100%; padding: 8px;"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" name="password" required style="width: 100%; padding: 8px;"><br><br>
+
+    <button type="submit" style="padding: 10px 20px;">Login</button>
+  </form>
+
+  <p style="text-align: center;">Don't have an account? <a href="/register">Register here</a></p>
+</main>
+
+<footer>
+  <p style="text-align: center;">© 2025 My Virtual Kitchen</p>
+</footer>
+
+<!-- Show error passed from server -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('error')) {
+    document.getElementById('login-error').textContent = decodeURIComponent(params.get('error'));
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - Virtual Kitchen</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Virtual Kitchen</h1>
+    <nav>
+      <a href="/home">Home</a> |
+      <a href="/viewRecipes">Menu</a> |
+      <a href="/addRecipe">Add Recipe</a> |
+      <a href="/dashboard">Dashboard</a> |
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>All Recipes</h2>
+
+    <form method="GET" action="/viewRecipes">
+      <input type="text" name="search" placeholder="Search by Title or Type" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="recipes">
+      <!-- Recipes will be inserted here dynamically by Node.js -->
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Virtual Kitchen</p>
+  </footer>
+
+</body>
+</html>

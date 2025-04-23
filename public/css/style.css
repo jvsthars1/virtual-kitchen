@@ -1,0 +1,200 @@
+/* Navbar Styling */
+header {
+    height: 70px;
+    background-color: #7d66d3;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #f0c040;
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* Navbar Layout */
+header {
+    height: 70px;
+    background-color: #7d66d3;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* Navbar Links Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #f0c040;
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.search-form input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 180px;
+    margin-right: 5px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0c040;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #e0b030;
+}
+
+/* Recipe Page Specific Styling */
+.recipes {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .recipe {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .recipe img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .title {
+    color: rgb(164, 144, 234);
+    font-family: 'Red Rose', cursive;
+  }
+  
+  .ingredient-list {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .ingredient-list ul {
+    padding-left: 15px;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .ingredient-list ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: rgb(164, 144, 234);
+  }
+  
+  .instructions {
+    padding-left: 20px;
+  }
+  
+  .recipe-details {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-details h1 {
+    color: #a490ea;
+    font-family: 'Red Rose', cursive;
+  }
+  
+  .recipe-details p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .recipe-actions {
+    margin-top: 10px;
+  }
+  .recipe-actions a {
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  .recipe-actions a:hover {
+    text-decoration: underline;
+  }
+  

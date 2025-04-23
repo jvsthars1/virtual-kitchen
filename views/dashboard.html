@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - My Virtual Kitchen</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<header id="main-header">
+  <nav>
+    <div class="logo">
+      <a href="/home"><img src="/public/images/logo.jpg" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/viewRecipes">Recipes</a></li>
+      <li><a href="/addRecipe">Add Recipe</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+
+    <form action="/viewRecipes" method="GET" class="search-form">
+      <input type="text" name="search" placeholder="Search Recipes..." required>
+      <button type="submit">🔍</button>
+    </form>
+  </nav>
+</header>
+
+<main style="text-align: center; margin-top: 80px;">
+  <h1>Welcome to Your Dashboard!</h1>
+  <p>You are now logged in. 🎉</p>
+  <p><a href="/addRecipe" style="color: #7d66d3;">Add a new recipe</a> or <a href="/viewRecipes" style="color: #7d66d3;">view recipes</a>.</p>
+</main>
+
+<footer>
+  <p style="text-align: center;">© 2025 My Virtual Kitchen</p>
+</footer>
+
+</body>
+</html>

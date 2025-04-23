@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Virtual Kitchen</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+  <!-- Navbar goes here -->
+  <header id="main-header">
+    <nav>
+      <div class="logo">
+        <a href="/"><img src="/public/images/logo.jpg" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/viewRecipes">Recipes</a></li>
+        <li><a href="/addRecipe">Add Recipe</a></li>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main class="recipes">
+  <h1>Our Recipes</h1>
+
+  <!-- Search Form -->
+  <form method="GET" action="/viewRecipes" style="margin: 20px;">
+    <input type="text" name="search" placeholder="Search by title or type" style="padding: 10px; width: 300px;">
+    <button type="submit" style="padding: 10px;">Search</button>
+  </form>
+
+  <!-- Recipes will be loaded dynamically by server.js -->
+  <div id="recipes">
+    <!-- Placeholder text: when the server renders dynamically, it will generate recipes here. -->
+    <p>Loading recipes...</p>
+  </div>
+</main>
+
+<footer>
+  <p style="text-align: center;">© 2025 Virtual Kitchen</p>
+</footer>
+</body>
+</html>

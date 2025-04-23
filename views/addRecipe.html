@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Recipe - My Virtual Kitchen</title>
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<header id="main-header">
+  <nav>
+    <div class="logo">
+      <a href="/home"><img src="/public/images/logo.jpg" alt="Logo"></a>
+    </div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/viewRecipes">Recipes</a></li>
+      <li><a href="/addRecipe">Add Recipe</a></li>
+   
+      <li><a href="/logout">Logout</a></li>
+      
+    </ul>
+
+    <!-- Search Form -->
+    <form action="/viewRecipes" method="GET" class="search-form">
+      <input type="text" name="search" placeholder="Search Recipes..." required>
+      <button type="submit">🔍</button>
+    </form>
+  </nav>
+</header>
+
+<main style="margin-top: 50px;">
+  <h1>Add a New Recipe</h1>
+
+  <form action="/addRecipe" method="POST" style="margin: 30px auto; width: 400px; text-align: left;">
+    <label>Recipe Name:</label><br>
+    <input type="text" name="name" required style="width: 100%; padding: 8px;"><br><br>
+
+    <label>Recipe Description:</label><br>
+    <textarea name="description" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+    <label>Recipe Type:</label><br>
+    <select name="type" required style="width: 100%; padding: 8px;">
+      <option value="Indian">Indian</option>
+      <option value="French">French</option>
+      <option value="Italian">Italian</option>
+      <option value="Chinese">Chinese</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Others">Others</option>
+    </select><br><br>
+
+    <label>Cooking Time (minutes):</label><br>
+    <input type="number" name="cookingtime" required style="width: 100%; padding: 8px;"><br><br>
+
+    <label>Ingredients:</label><br>
+    <textarea name="ingredients" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+    <label>Instructions:</label><br>
+    <textarea name="instructions" required style="width: 100%; padding: 8px;"></textarea><br><br>
+
+    <label>Image Name (optional):</label><br>
+    <input type="text" name="image" placeholder="example: biryani.jpg" style="width: 100%; padding: 8px;"><br><br>
+
+    <button type="submit" style="padding: 10px 20px;">Add Recipe</button>
+  </form>
+</main>
+
+<footer>
+  <p style="text-align: center;">© 2025 My Virtual Kitchen</p>
+</footer>
+
+</body>
+</html>
