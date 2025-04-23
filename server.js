@@ -7,12 +7,13 @@ const bcrypt = require('bcryptjs');
 
 // Connect to MySQL
 const db = mysql.createConnection({
-  host: 'cs2410-db01pvm.aston.ac.uk',
-
-  user: 'u-230235494',
-  password: 's2fvi58sF0KH3qv',
-  database: 'u_230235494_db'
+  host: 'sql8.freesqldatabase.com',
+  user: 'sql8774823',
+  password: 'jqWzGMZdww',   
+  database: 'sql8774823',
+  port: 3306                
 });
+
 
 
 

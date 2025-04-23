@@ -1,5 +1,5 @@
 
-USE vkitchen;
+-- USE vkitchen;
 
 DROP TABLE IF EXISTS recipes;
 DROP TABLE IF EXISTS users;
