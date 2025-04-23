@@ -527,6 +527,12 @@ function handleLogin(req, res) {
 }
 
 // Handle Add Recipe
+function getCookieValue(cookieString, key) {
+  const cookies = cookieString.split(';').map(c => c.trim());
+  const match = cookies.find(c => c.startsWith(key + '='));
+  return match ? decodeURIComponent(match.split('=')[1]) : null;
+}
+
 function handleAddRecipe(req, res) {
   let body = '';
   req.on('data', chunk => { body += chunk.toString(); });
@@ -540,8 +546,8 @@ function handleAddRecipe(req, res) {
     const instructions = params.get('instructions');
     const image = params.get('image') || 'default.jpg';
     const cookies = req.headers.cookie || '';
-const uidMatch = cookies.match(/uid=(\d+)/);
-const uid = uidMatch ? parseInt(uidMatch[1]) : null;
+const uid = parseInt(getCookieValue(cookies, 'uid'));
+
 
 if (!uid) {
   res.writeHead(401);
