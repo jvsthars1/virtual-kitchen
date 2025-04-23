@@ -512,9 +512,13 @@ function handleLogin(req, res) {
       bcrypt.compare(password, user.password, (err, isMatch) => {
         if (isMatch) {
           res.writeHead(302, {
-            'Set-Cookie': `loggedIn=true; uid=${user.uid}`,
+            'Set-Cookie': [
+              `loggedIn=true; Path=/; HttpOnly`,
+              `uid=${user.uid}; Path=/; HttpOnly`
+            ],
             Location: '/dashboard'
           });
+          
           res.end();
         } else {
           const errorMsg = encodeURIComponent('Incorrect username or password.');
@@ -548,6 +552,8 @@ function handleAddRecipe(req, res) {
     const cookies = req.headers.cookie || '';
 const uid = parseInt(getCookieValue(cookies, 'uid'));
 
+console.log('Cookies:', cookies);
+console.log('Extracted UID:', uid);
 
 if (!uid) {
   res.writeHead(401);
